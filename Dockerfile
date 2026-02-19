@@ -16,8 +16,8 @@ RUN wget https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d713
     && tar -xzvf openjdk-17.0.2_linux-x64_bin.tar.gz \
     && rm openjdk-17.0.2_linux-x64_bin.tar.gz
 
-# Download and install Apache Maven 3.2.5
-RUN wget https://dlcdn.apache.org/maven/maven-3/3.9.4/binaries/apache-maven-3.9.4-bin.tar.gz \
+# Download and install Apache Maven 3.9.4
+RUN wget https://archive.apache.org/dist/maven/maven-3/3.9.4/binaries/apache-maven-3.9.4-bin.tar.gz \
     && tar -xzvf apache-maven-3.9.4-bin.tar.gz \
     && rm apache-maven-3.9.4-bin.tar.gz
 
@@ -46,7 +46,7 @@ RUN /bin/bash -c "source $NVM_DIR/nvm.sh && nvm install $NODE_VERSION && nvm use
 ENV NODE_PATH $NVM_DIR/versions/node/$NODE_VERSION/bin
 ENV PATH $NODE_PATH:$PATH
 
-RUN bash - | npm install --location=global npm@8.11.0
+RUN npm install --location=global npm@8.11.0
 
 # Install global dependencies - bower
 RUN npm install --location=global bower -y 

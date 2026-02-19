@@ -322,7 +322,7 @@
                 <jdbc.database>medplat</jdbc.database>
                 <jdbc.username>postgres</jdbc.username>
                 <jdbc.password>argusadmin</jdbc.password>
-                <jdbc.port>5432</jdbc.port>
+                <jdbc.port>5436</jdbc.port>
                 <jdbc.maxActiveConnection>5</jdbc.maxActiveConnection>
                 <server.droptype>P</server.droptype>
                 <server.type>DEV</server.type>
